@@ -216,12 +216,13 @@
   }
 
   /* ===== COLORED SECTIONS (break the all-black look) ===== */
-  .sec-light{background:#ffffff;color:#15151a}
-  .sec-light .sec-title{color:#15151a}
-  .sec-light .sec-title .gold,.sec-light .gold{color:#b8860b}
-  .sec-light .sec-sub{color:#6a6a72}
-  .sec-light .eyebrow{color:#6a6a72}
-  .sec-light .textblock{color:#3a3a42}
+  /* recolor ONLY elements directly on the white bg; keep the dark cards' light text intact */
+  .sec-light{background:#ffffff}
+  .sec-light > .wrap > .sec-title{color:#15151a}
+  .sec-light > .wrap > .sec-title .gold{color:#b8860b}
+  .sec-light > .wrap > .sec-sub{color:#6a6a72}
+  .sec-light > .wrap > .eyebrow{color:#6a6a72}
+  .sec-light > .wrap > .textblock{color:#3a3a42}
   .sec-offer{background:linear-gradient(180deg,var(--gold-2),var(--gold))}
 </style>
 <!-- Meta Pixel Code -->
