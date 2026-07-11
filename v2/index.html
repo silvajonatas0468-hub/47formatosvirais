@@ -94,7 +94,10 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
     background:radial-gradient(80% 55% at 70% 8%,rgba(245,179,1,.16),transparent 60%),
                radial-gradient(60% 40% at 10% 20%,rgba(245,179,1,.07),transparent 60%)}
   .hero .wrap{position:relative;z-index:1}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"copytop shot" "copyrest shot";column-gap:44px;row-gap:12px;align-items:start}
+  .hcopy-top{grid-area:copytop}
+  .hcopy-rest{grid-area:copyrest}
+  .hero .shot{grid-area:shot;align-self:center}
   .hero h1{font-size:clamp(2rem,4.6vw,3.1rem);margin:16px 0 14px}
   .hero h1 .gold{background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero .sub{color:var(--muted);font-size:1.05rem;max-width:34ch;margin-bottom:22px}
@@ -245,7 +248,7 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
 
   /* ===== RESPONSIVE ===== */
   @media(max-width:820px){
-    .hero-grid{grid-template-columns:1fr;gap:26px;text-align:center}
+    .hero-grid{grid-template-columns:1fr;grid-template-areas:"copytop" "shot" "copyrest";gap:22px;text-align:center}
     .hero .sub{max-width:none}
     .hero .mini span{justify-content:center;text-align:left}
     .price-anchor,.guaran-mini{justify-content:center}
@@ -281,9 +284,17 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
 <section class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div>
-        <span class="eyebrow">★ Método validado • +2025</span>
+      <div class="hcopy-top">
+        <span class="eyebrow">★ Método validado • +2026</span>
         <h1>Viralize <span class="gold">10x mais</span> com 47 formatos orgânicos validados</h1>
+      </div>
+      <div class="shot">
+        <div class="glow"></div>
+        <img src="/v2/assets/imac.png" alt="47 Formatos que Viralizam - área de membros" width="1508" height="812" fetchpriority="high" />
+        <div class="float f1"><b><span class="gold">1.7M</span></b><small>views em 1 reel</small></div>
+        <div class="float f2"><b>+27K</b><small>seguidores / 7 dias</small></div>
+      </div>
+      <div class="hcopy-rest">
         <p class="sub">Sem gastar 1 real em tráfego. Os mesmos formatos que arrancam a atenção de milhões no Reels, TikTok e Stories.</p>
         <div class="rating">
           <span class="stars">★★★★★</span>
@@ -299,14 +310,8 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
           <span class="to">R$47<small>,00</small></span>
           <span class="save">88% OFF hoje</span>
         </div>
-        <a href="https://pay.hub.la/h4FHUEHybw3yucfF6JBS" target="_blank" rel="noopener" class="btn pulse cta-btn">Quero os 47 formatos <span class="sm">Acesso imediato • Garantia de 7 dias</span></a>
+        <a href="https://pay.hub.la/h4FHUEHybw3yucfF6JBS" target="_blank" rel="noopener" class="btn pulse cta-btn">Quero os 47 formatos</a>
         <div class="guaran-mini">🔒 Compra 100% segura • Acesso vitalício</div>
-      </div>
-      <div class="shot">
-        <div class="glow"></div>
-        <img src="/v2/assets/imac.png" alt="47 Formatos que Viralizam - área de membros" width="1508" height="812" fetchpriority="high" />
-        <div class="float f1"><b><span class="gold">1.7M</span></b><small>views em 1 reel</small></div>
-        <div class="float f2"><b>+27K</b><small>seguidores / 7 dias</small></div>
       </div>
     </div>
   </div>
@@ -318,8 +323,7 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
     <span><b>Reels</b></span><span class="dot"></span>
     <span><b>TikTok</b></span><span class="dot"></span>
     <span><b>Shorts</b></span><span class="dot"></span>
-    <span>Acesso <b>vitalício</b></span><span class="dot"></span>
-    <span>Atualizações <b>inclusas</b></span>
+    <span>Acesso <b>vitalício</b></span>
   </div>
 </div>
 
