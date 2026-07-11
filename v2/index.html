@@ -94,27 +94,27 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
     background:radial-gradient(80% 55% at 70% 8%,rgba(245,179,1,.16),transparent 60%),
                radial-gradient(60% 40% at 10% 20%,rgba(245,179,1,.07),transparent 60%)}
   .hero .wrap{position:relative;z-index:1}
-  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;grid-template-areas:"copytop shot" "copyrest shot";column-gap:44px;row-gap:12px;align-items:start}
-  .hcopy-top{grid-area:copytop}
-  .hcopy-rest{grid-area:copyrest}
-  .hero .shot{grid-area:shot;align-self:center}
+  .hero-grid{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;max-width:760px;margin:0 auto}
+  .hcopy-top{width:100%}
+  .hcopy-rest{width:100%;max-width:600px;display:flex;flex-direction:column;align-items:center}
+  .hero .shot{width:100%;max-width:540px;margin:2px auto 6px}
   .hero h1{font-size:clamp(2rem,4.6vw,3.1rem);margin:16px 0 14px}
   .hero h1 .gold{background:linear-gradient(120deg,var(--gold-2),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
   .hero .sub{color:var(--muted);font-size:1.05rem;max-width:34ch;margin-bottom:22px}
   .hero .mini{display:flex;flex-direction:column;gap:9px;margin:20px 0 26px}
   .hero .mini span{display:flex;gap:10px;align-items:flex-start;font-size:.96rem;color:#e9e6df}
   .hero .mini .ck{color:var(--gold);font-weight:800;flex:0 0 auto}
-  .rating{display:flex;align-items:center;gap:11px;margin-bottom:6px}
+  .rating{display:flex;align-items:center;justify-content:center;gap:11px;margin-bottom:6px}
   .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
   .rating small{color:var(--muted);font-size:.84rem}
 
-  .price-anchor{display:flex;align-items:baseline;gap:12px;margin:22px 0 16px;flex-wrap:wrap}
+  .price-anchor{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:22px 0 16px;flex-wrap:wrap}
   .price-anchor .from{color:var(--muted);text-decoration:line-through;font-size:1.05rem}
   .price-anchor .to{font-family:'Sora',sans-serif;font-weight:800;font-size:2.5rem;line-height:1}
   .price-anchor .to small{font-size:1rem;color:var(--muted);font-weight:600}
   .price-anchor .save{background:rgba(34,197,94,.14);color:var(--green);font-weight:700;font-size:.76rem;
     padding:5px 11px;border-radius:20px;border:1px solid rgba(34,197,94,.3)}
-  .guaran-mini{color:var(--muted);font-size:.82rem;margin-top:12px;display:flex;align-items:center;gap:7px;justify-content:flex-start}
+  .guaran-mini{color:var(--muted);font-size:.82rem;margin-top:12px;display:flex;align-items:center;gap:7px;justify-content:center}
 
   /* hero mockup */
   .shot{position:relative;padding:14px}
@@ -248,9 +248,8 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
 
   /* ===== RESPONSIVE ===== */
   @media(max-width:820px){
-    .hero-grid{grid-template-columns:1fr;grid-template-areas:"copytop" "shot" "copyrest";gap:22px;text-align:center}
+    .hero-grid{gap:20px}
     .hero .sub{max-width:none}
-    .hero .mini span{justify-content:center;text-align:left}
     .price-anchor,.guaran-mini{justify-content:center}
     .stack{grid-template-columns:1fr}
     .float.f1{left:2%}.float.f2{right:2%}
