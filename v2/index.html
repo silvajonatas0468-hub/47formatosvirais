@@ -214,12 +214,11 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
   .guarantee p{color:var(--muted);font-size:.98rem;max-width:48ch;margin:0 auto 24px}
 
   /* ===== ABOUT ===== */
-  .about{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:center;max-width:900px;margin:0 auto}
-  .about .photo{width:100%;border-radius:20px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border:1px solid var(--line)}
+  .about{display:flex;flex-direction:column;align-items:center;text-align:center;max-width:620px;margin:0 auto}
+  .about .photo{width:100%;max-width:300px;border-radius:20px;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border:1px solid var(--line);margin-bottom:22px}
   .about .name{font-family:'Sora',sans-serif;color:var(--gold);font-weight:800;font-size:1.3rem}
   .about .role{color:var(--muted);font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
-  .about p{color:var(--muted);font-size:.98rem;margin-bottom:13px}
-  @media(max-width:720px){.about{grid-template-columns:1fr;text-align:center}.about .photo{max-width:320px;margin:0 auto}}
+  .about p{color:var(--muted);font-size:.98rem;margin:0 auto 13px;max-width:52ch}
 
   /* ===== FAQ ===== */
   .faq{max-width:720px;margin:0 auto;display:grid;gap:12px}
@@ -432,7 +431,7 @@ src="https://www.facebook.com/tr?id=1713549109858694&ev=PageView&noscript=1"
     <div class="sec-head"><span class="eyebrow">Quem vai te ensinar</span><h2>Ainda não me <span class="gold">conhece?</span></h2></div>
     <div class="about">
       <img class="photo" src="/v2/assets/foto.jpg" alt="Jônatas Silva" loading="lazy"/>
-      <div style="text-align:left">
+      <div>
         <div class="name">JÔNATAS SILVA</div>
         <div class="role">Especialista em conteúdo viral</div>
         <p>Muito prazer, eu sou o Jônatas Silva e há 3 anos vivo do que ensino: transformar conteúdo comum em vídeos que viralizam.</p>
